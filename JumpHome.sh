@@ -1,14 +1,14 @@
 #!/bin/bash
 JHDir=~/.config/JumpHome
 
-source $JHDir/homes_a
+source $JHDir/homes
 
 s() {
   if [[ "$1" =~ ^[[:graph:]]+$ ]]
   then
-    echo "alias j$1='cd $PWD'" >> $JHDir/homes_a
-    echo "$1" >> $JHDir/homes_l 
-    source $JHDir/homes_a
+    echo "#$1" >> $JHDir/homes
+    echo "alias j$1='cd $PWD'" >> $JHDir/homes
+    source $JHDir/homes
   elif [[ $1 ]]
     then
       echo "home names must not contain whitespace"
@@ -16,5 +16,9 @@ s() {
 }
 
 l() {
-  cat $JHDir/homes_l
+  grep --color=never "^#" $JHDir/homes | cut --characters=2-
 }
+
+# r() {
+#
+# }

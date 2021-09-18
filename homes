@@ -1,0 +1,12 @@
+#doc
+alias jdoc='cd /home/William/Documents'
+#c
+alias jc='cd /home/William/Documents/C'
+#dks
+alias jdks='cd /home/William/ProjectIgnis/deck'
+#adventure
+alias jadventure='cd /home/William/Documents/MYMEMES/1INE'
+#Algo
+alias jAlgo='cd /home/William/Documents/Algo'
+#AC
+alias jAC='cd /home/William/Documents/ArenaChevy'

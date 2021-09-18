@@ -8,5 +8,5 @@ alias jdks='cd /home/William/ProjectIgnis/deck'
 alias jadventure='cd /home/William/Documents/MYMEMES/1INE'
 #Algo
 alias jAlgo='cd /home/William/Documents/Algo'
-#AC
-alias jAC='cd /home/William/Documents/ArenaChevy'
+#conf
+alias jconf='cd /home/William/.config'

@@ -19,6 +19,14 @@ l() {
   grep --color=never "^#" $JHDir/homes | cut --characters=2-
 }
 
-# r() {
-#
-# }
+r() {
+  if [[ "$1" =~ ^[[:graph:]]+$ ]]
+  then
+    sed -i "/^#$1/,/alias j$1=/d" $JHDir/homes
+    unalias "j$1"
+    source $JHDir/homes
+  elif [[ $1 ]]
+    then
+      echo "home names must not contain whitespace"
+  fi
+}

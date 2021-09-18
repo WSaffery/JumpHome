@@ -21,10 +21,20 @@ source $JHDir/homes
 s() {
   if [[ "$1" =~ ^[[:graph:]]+$ ]]
   then
+    if [[ -d "$2" ]]
+    then
+      TDIR=`realpath $2`
+    elif [[ -n "$2" ]]
+      then
+        echo "target must be a directory"
+        return;
+    else
+      TDIR=$PWD
+    fi
     echo "#$1" >> $JHDir/homes
-    echo "alias j$1='cd $PWD'" >> $JHDir/homes
+    echo "alias j$1='cd $TDIR'" >> $JHDir/homes
     source $JHDir/homes
-  elif [[ $1 ]]
+  elif [[ "$1" ]]
     then
       echo "home names must not contain whitespace"
   fi

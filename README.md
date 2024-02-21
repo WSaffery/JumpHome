@@ -14,7 +14,7 @@ FOSS Shell bookmarks or "homes" for Bash.
 
 ## Install
 just add the script to a directory somewhere and add `source PATH_TO_DIR/JumpHome.sh` to your .bashrc file
-* `source PATH_TO_DIR/JumpHome.sh >> ~/.bashrc`
+* `echo 'source PATH_TO_DIR/JumpHome.sh' >> ~/.bashrc`
 
 ## Notes
 This script is very heavily inspired by ["bashmarks"](https://github.com/huyng/bashmarks).
